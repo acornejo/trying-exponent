@@ -1,0 +1,5 @@
+.DS_Store
+.exponent/
+coverage/
+node_modules/
+yarn.lock

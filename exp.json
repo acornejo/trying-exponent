@@ -1,0 +1,22 @@
+{
+  "name": "create-exponent-app",
+  "slug": "create-exponent-app",
+  "sdkVersion": "11.0.0",
+  "description": "A basic Exponent application boilerplate.",
+  "version": "0.0.0",
+  "orientation": "portrait",
+  "primaryColor": "#1b73b4",
+  "iconUrl": "https://s3.amazonaws.com/exp-brand-assets/ExponentEmptyManifest_192.png",
+  "notification": {
+    "iconUrl": "https://s3.amazonaws.com/exp-us-standard/placeholder-push-icon-blue-circle.png",
+    "color" : "#000000"
+  },
+  "loading": {
+    "hideExponentText": true,
+    "backgroundColor": "#1b73b4",
+    "loadingIndicatorStyleExperimental": "light"
+  },
+  "packagerOpts": {
+    "assetExts": []
+  }
+}
