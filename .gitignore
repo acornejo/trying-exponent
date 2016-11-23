@@ -2,4 +2,6 @@
 .exponent/
 coverage/
 node_modules/
+npm-debug.log*
+src/__tests__/__snapshots__/
 yarn.lock

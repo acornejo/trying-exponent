@@ -1,3 +1,6 @@
+# create-exponent-app
+*To be populated ..*
+
 # What you get out of the box with this package
 - **[Exponent](https://getexponent.com) ([SDK](https://docs.getexponent.com/versions/v11.0.0/index.html)** and **[CLI](https://github.com/exponentjs/exp)**), a mobile app development tool that enables you to build high quality native iOS and Android applications using JavaScript and deploy them effortlessly.
 - **[React Native](http://facebook.github.io/react-native/releases/0.36/)**, lets you build mobile apps using only JavaScript. It uses the same design as [React](https://facebook.github.io/react/), letting you compose a rich mobile UI from declarative components.
@@ -18,11 +21,14 @@ This is an opinionated suite, meaning that this is what I personally use when I 
 ## Setup (if needed)
 - [Homebrew](http://brew.sh), a package manager for macOS.
 - [Node.js](https://nodejs.org), a server-side JavaScript environment based on V8 engine.
+- [Watchman](https://facebook.github.io/watchman/), a file watching service.
 - [Yarn](https://yarnpkg.com) *(optional)*, a dependency manager.
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 `brew install node`
+
+`brew install watchman`
 
 `brew install yarn`
 
@@ -45,17 +51,55 @@ Install the following packages through [Package Control](https://packagecontrol.
 - Update `exp.json` with your project information (detailed configuration [here](https://docs.getexponent.com/versions/v11.0.0/guides/configuration.html)).
 - Start working on your app in `./src`.
 
-### GUI
-As alternative to the CLI, you can use the [XDE](https://docs.getexponent.com/versions/v11.0.0/introduction/xde-tour.html).
+## GUI
+As an alternative to the Exponent CLI, you can use the [XDE](https://docs.getexponent.com/versions/v11.0.0/introduction/xde-tour.html). The XDE doesn't provide access to the `test`, `build`, `lint` and `flow` commands.
 
-## Running on simulators
+### Running on simulators
 - [Xcode](https://developer.apple.com/xcode/), for IOS emulation.
 - [GenyMotion](https://www.genymotion.com), for Android emulation.
 
-## Running on mobile devices
+### Running on mobile devices
 - [The Exponent IOS client](https://itunes.com/apps/exponent).
 - [The Exponent Android client](https://play.google.com/store/apps/details?id=host.exp.exponent).
 - As a standalone app ([guide](https://docs.getexponent.com/versions/v11.0.0/guides/building-standalone-apps.html)).
+
+### Demo App
+*To be populated ..*
+
+![Screenshot](https://i.imgur.com/DD4MI1I.png)
+
+```javascript
+class Store {
+  @observable list: Array<string> = [
+    'Hello World!',
+    'Hello React Native!',
+    'Hello Exponent!'
+  ];
+
+  @action add = (item: string) => this.list.push(item);
+}
+```
+
+```javascript
+@observer class App extends Component {
+  componentDidMount() { StatusBar.setHidden(true); }
+  componentWillUpdate() { LayoutAnimation.spring(); }
+
+  render() {
+    return (
+      <ScrollView style={{ flex: 1, padding: 20 }}>
+        <Text style={{ fontSize: 24, color: '#1b73b4' }}>My Hellos ({store.list.length})</Text>
+
+        {store.list.map((item, key) => <Text key={`item-${key}`}>{item}</Text>)}
+
+        <TouchableOpacity onPress={() => store.add('Hello!')}>
+          <Text style={{ color: '#1b73b4' }}>sayHello()</Text>
+        </TouchableOpacity>
+      </ScrollView>
+    );
+  }
+}
+```
 
 ### Additional SublimeText packages for a better workspace
 *To be populated ..*
