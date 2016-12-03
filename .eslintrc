@@ -20,6 +20,7 @@
     "quotes": [1, "single"],
     "react/jsx-filename-extension": 0,
     "react/prop-types": 0,
-    "semi": [1, "always"]
+    "semi": [1, "always"],
+    "no-use-before-define": 0
   }
 }

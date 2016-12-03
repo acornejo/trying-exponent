@@ -39,6 +39,9 @@ Install the following packages through [Package Control](https://packagecontrol.
 - [SublimeLinter-eslint](https://github.com/roadhump/SublimeLinter-eslint).
 - [SublimeLinter-flow](https://github.com/SublimeLinter/SublimeLinter-flow).
 
+## Working with [Atom](https://atom.io)
+*To be populated ..*
+
 # Usage
 - `npm start` starts a local server for your app and run it in the simulator.
 - `npm test` starts Jest as a test runner.
@@ -47,9 +50,14 @@ Install the following packages through [Package Control](https://packagecontrol.
 - `npm run flow` starts Flow type checking.
 
 ## Getting started
+- Go through the installation/setup process.
 - Update `package.json` with your project information.
 - Update `exp.json` with your project information (detailed configuration [here](https://docs.getexponent.com/versions/v11.0.0/guides/configuration.html)).
 - Start working on your app in `./src`.
+- Run your app with `npm start`.
+
+### Quickly
+Run `yarn && yarn start`.
 
 ## GUI
 As an alternative to the Exponent CLI, you can use the [XDE](https://docs.getexponent.com/versions/v11.0.0/introduction/xde-tour.html). The XDE doesn't provide access to the `test`, `build`, `lint` and `flow` commands.
@@ -102,6 +110,9 @@ class Store {
 ```
 
 ### Additional SublimeText packages for a better workspace
+*To be populated ..*
+
+### Additional Atom packages for a better workspace
 *To be populated ..*
 
 ### Suggested React Native packages to utilize in Exponent
