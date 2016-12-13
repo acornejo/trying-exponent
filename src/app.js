@@ -18,19 +18,33 @@ class Store {
 
 const store = new Store();
 
-@observer class App extends Component {
-  componentDidMount() { StatusBar.setHidden(true); }
-  componentWillUpdate() { LayoutAnimation.spring(); }
+@observer
+class App extends Component {
+  componentDidMount() {
+    StatusBar.setHidden(true);
+  }
+
+  componentWillUpdate() {
+    LayoutAnimation.spring();
+  }
 
   render() {
     return (
       <ScrollView style={{ flex: 1, padding: 20 }}>
-        <Text style={{ fontSize: 24, color: '#1b73b4' }}>My Hellos ({store.list.length})</Text>
+        <Text key={`title-${store.list.length}`} style={{ color: '#1b73b4', fontSize: 24 }}>
+          My Hellos ({store.list.length})
+        </Text>
 
-        {store.list.map((item, key) => <Text key={`item-${key}`}>{item}</Text>)}
+        {store.list.map((item, key) => (
+          <Text key={`item-${key}`} style={{ color: '#444' }}>
+            {item}
+          </Text>
+        ))}
 
         <TouchableOpacity onPress={() => store.add('Hello!')}>
-          <Text style={{ color: '#1b73b4' }}>sayHello()</Text>
+          <Text style={{ color: '#1b73b4' }}>
+            sayHello()
+          </Text>
         </TouchableOpacity>
       </ScrollView>
     );
