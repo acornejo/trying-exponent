@@ -50,7 +50,6 @@ Install the following packages through [Package Control](https://packagecontrol.
 
 ### Develop
 - `yarn start` starts a local server for your app and run it in the simulator.
-- `yarn run send` sends the local server url to your email (modify your email in `package.json`).
 - `exp stop --all` stops all running Exponent services.
 
 ### Test
@@ -122,7 +121,7 @@ class App extends Component {
   render() {
     return (
       <ScrollView style={{ flex: 1, padding: 20 }}>
-        <Text key={`title-${store.list.length}`} style={{ color: '#1b73b4', fontSize: 24 }}>
+        <Text style={{ color: '#1b73b4', fontSize: 24 }}>
           My Hellos ({store.list.length})
         </Text>
 

@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <ScrollView style={{ flex: 1, padding: 20 }}>
-        <Text key={`title-${store.list.length}`} style={{ color: '#1b73b4', fontSize: 24 }}>
+        <Text style={{ color: '#1b73b4', fontSize: 24 }}>
           My Hellos ({store.list.length})
         </Text>
 
