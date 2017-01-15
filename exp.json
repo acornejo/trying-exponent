@@ -14,9 +14,8 @@
   "loading": {
     "hideExponentText": true,
     "backgroundColor": "#1b73b4",
-    "loadingIndicatorStyleExperimental": "light"
   },
   "packagerOpts": {
-    "assetExts": []
+    "assetExts": ["ttf"]
   }
 }

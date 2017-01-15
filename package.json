@@ -5,13 +5,16 @@
   "private": true,
   "main": "main.js",
   "dependencies": {
+    "@exponent/vector-icons": "^2.0.3",
     "exponent": "12.0.5",
     "mobx": "2.7.0",
     "mobx-react": "4.0.4",
+    "native-base": "^0.5.15",
     "react": "15.3.2",
     "react-native": "git+https://github.com/exponentjs/react-native#sdk-12.0.0"
   },
   "devDependencies": {
+    "@exponent/vector-icons": "^2.0.3",
     "babel-eslint": "7.1.1",
     "babel-jest": "18.0.0",
     "babel-plugin-transform-flow-strip-types": "6.21.0",
@@ -30,14 +33,10 @@
     "react-dom": "15.3.2"
   },
   "scripts": {
-    "start": "exp start --dev --lan && exp ios",
-    "a": "open -a /Applications/Genymotion.app/Contents/MacOS/player.app --args --vm-name 'ecd285e0-ec00-4b6f-beea-39096b654522' && exp android",
-    "test": "jest -u #--coverage",
+    "start": "exp start",
     "lint": "eslint .; exit 0",
     "flow": "flow --show-all-errors; exit 0",
-    "outdated": "yarn outdated && npm outdated -g; exit 0",
-    "brew": "brew update && brew upgrade",
-    "clean": "find . -name .DS_Store -type f -delete -print"
+    "outdated": "yarn outdated && npm outdated -g; exit 0"
   },
   "jest": {
     "preset": "jest-exponent"
